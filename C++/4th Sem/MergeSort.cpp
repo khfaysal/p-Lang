@@ -3,7 +3,7 @@ using namespace std;
 
 void merge(int arr[], int left, int mid, int right)
 {
-    int n1 = mid - left + 1;  //[[[01234] 5/2 =2; 012 holo n1 er size. where, mid= 2; left = 0; now, mid -left==(2-0)=2| but size 012= 3, thats why left-mid+1]]
+    int n1 = mid - left + 1; //[[[01234] 5/2 =2; 012 holo n1 er size. where, mid= 2; left = 0; now, mid -left==(2-0)=2| but size 012= 3, thats why left-mid+1]]
     int n2 = right - mid;    //
 
     int leftArr[n1], rightArr[n2];
