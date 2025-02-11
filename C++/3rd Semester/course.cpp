@@ -218,14 +218,12 @@
 
 #include <iostream>
 #include <cstring> // for strcpy and strcmp
-using namespace std;
+        using namespace std;
 
 int main()
 {
     int n;
     cout<< "Enter a Number: ";
     cin>> n;
-    cout<<"The Last digit is : n%10
-
-
+    cout<<"The Last digit is : n%10";
 }
