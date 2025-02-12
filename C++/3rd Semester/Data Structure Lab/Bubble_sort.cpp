@@ -5,7 +5,7 @@ int main()
     int ar[10], sz, tmp;
     cout << " Enter the size of Array: ";
     cin >> sz;
-    cout << " Enter the Elements: " << endl;
+    cout << " Enter the Elements : ";
     for (int i = 0; i < sz; i++)
     {
         cin >> ar[i];
@@ -16,15 +16,15 @@ int main()
         {
             if (ar[j] > ar[j+1])
             {
-                tmp = ar[j];
-                ar[j] = ar[j+1];
-                ar[j+1] = tmp;
+                tmp = ar[i];
+                ar[i] = ar[j];
+                ar[j] = tmp;
             }
         }
     }
-    cout << "Sorted Array:" << endl;
+    cout << "Sorted Array : " ;
     for (int i = 0; i < sz; i++)
     {
-        cout << ar[i] << endl;
+        cout << ar[i] << " ";
     }
 }
