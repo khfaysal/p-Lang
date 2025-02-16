@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hello World in JavaScript</title>
 </head>
 <body>
-    <h1>
-        Balsal
-    </h1>
+
+    <!-- Displaying "Hello, World!" inside an HTML element -->
+    <h1 id="message"></h1>
+
+    <script>
+        // Method 1: Console log
+        console.log("Hello, World!");
+
+        // Method 2: Alert box
+        alert("Hello, World!");
+
+        // Method 3: Writing directly to the document
+        document.write("<h2>Hello, World!</h2>");
+
+        // Method 4: Displaying inside an HTML element
+        document.getElementById("message").innerHTML = "Hello, World!";
+    </script>
+
 </body>
 </html>
