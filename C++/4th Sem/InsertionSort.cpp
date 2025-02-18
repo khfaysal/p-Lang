@@ -31,6 +31,6 @@ int main()
     {
         cout << arr[k] << " ";
     }
-
+    
     return 0;
 }

@@ -1,11 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main()
-{
-    for (int i = 0; i < 1000; i++)
-    {
-        cout << "I love you Jahan";
-    }
-
+{   int n;cin>>n;
+    int ar[n] ;
+  
+  
+  
+   cout<<"done";
+   
     return 0;
 }

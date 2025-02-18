@@ -4,3 +4,13 @@ Formating:
 <b></b>  ==   <strong></strong>  --> Bolt
 
 
+List in HTML is of three types
+
+ordered List       ol
+unordered list     ul
+description list   dl  (dt, dd)
+
+
+Grouping:
+InLine Grouping   -> span
+BlockLine Grouping -> div
