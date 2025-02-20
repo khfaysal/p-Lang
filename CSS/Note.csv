@@ -1,0 +1,25 @@
+CSS  =  Cascading Style Sheets
+
+type of CSS:
+Internal CSS
+Inline CSS
+External CSS
+
+
+types of selector:
+
+1. Universal selector
+2. tag selector
+3. class selector
+4. d selector
+5. attribute selector
+
+Color:
+color: blue;
+color: #686de0
+color: rgb(225,34,20);
+color: rgba(255,34,23, 0.4);  [opasity]
+
+
+
+

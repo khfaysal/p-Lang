@@ -1,0 +1,29 @@
+/* Universal Selector */
+h1{
+    color: rgb(77, 44, 168);
+    font-size: 60;
+    text-align: center;
+}
+
+/* Tag Selector */
+p{
+    color: blue;
+}
+/* Class Selector */
+.l{
+    color: rgb(206, 193, 17);
+}
+
+#btn{
+    color: rgb(255, 105, 5);
+}
+
+a{
+    color: yellowgreen;
+}
+
+/* Attribute selector */
+
+[href ="https://google.com"] {
+    color: magenta;
+}
