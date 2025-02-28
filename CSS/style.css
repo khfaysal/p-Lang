@@ -1,29 +1,61 @@
 /* Universal Selector */
-h1{
-    color: rgb(77, 44, 168);
-    font-size: 60;
-    text-align: center;
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(56, 179, 72);
+  font-size: 60;
+  text-align: center;
 }
 
 /* Tag Selector */
-p{
-    color: blue;
+.first {
+  text-align: right;
+  font-weight: 600;
+  color: rgb(27, 27, 49);
+  /* text-decoration: overline; */
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  text-shadow: 10px 10px 10px red;
+}
+
+.second {
+  text-align: center;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  font-style: italic;
+  word-spacing: 20px;
+  line-height: 25px;
+  color: rgb(190, 177, 152);
+}
+
+/* Custom Fonts */
+
+@font-face {
+    font-family: Moldie;
+    src: url(./fonts/Moldie\ Demo.otf);
+}
+
+.third {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Moldie;
 }
 /* Class Selector */
-.l{
-    color: rgb(206, 193, 17);
+.l {
+  color: rgb(206, 193, 17);
 }
 
-#btn{
-    color: rgb(255, 105, 5);
+#btn {
+  color: rgb(255, 105, 5);
 }
 
-a{
-    color: yellowgreen;
+a {
+  color: yellowgreen;
 }
 
 /* Attribute selector */
 
-[href ="https://google.com"] {
-    color: magenta;
+[href ="https://google.com"]
+{
+  color: magenta;
 }

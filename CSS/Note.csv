@@ -27,5 +27,13 @@ Padding:
         padding: top bottom right left;
         padding: top-bottom, right-left;
         padding: everyside;
+ 
+ 
+border:
+      border: 5px dotted rgb(75, 7, 7);
+      border-radius: 45px;   [kototuku curve hobe]
 
 
+margin:
+     margin: top right bottom left;
+     [block level element e char dikei kaj kore but inline element er sudhu left right e kaj kore, top & bottom e kaj kore na]
