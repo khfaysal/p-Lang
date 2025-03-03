@@ -1,0 +1,6 @@
+{
+    "editor.fontSize": 16,
+    "chat.editor.fontSize": 16,
+    "notebook.formatOnSave.enabled": true,
+    "files.autoSave": "onWindowChange"
+}
