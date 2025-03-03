@@ -37,3 +37,8 @@ border:
 margin:
      margin: top right bottom left;
      [block level element e char dikei kaj kore but inline element er sudhu left right e kaj kore, top & bottom e kaj kore na]
+
+
+
+To Curve the box:
+     border radius 30px;
