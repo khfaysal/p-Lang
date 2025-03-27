@@ -14,3 +14,12 @@ description list   dl  (dt, dd)
 Grouping:
 InLine Grouping   -> span
 BlockLine Grouping -> div
+
+
+
+colspan/rowspan:
+      [table data <td colspan/ rowspan="1...9"> te add korte hobe]
+ex:
+<td colspan="4">DIU Univercity</td>
+<td rowspan="3">Dhaka</td>
+
