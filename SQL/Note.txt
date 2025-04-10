@@ -1,0 +1,117 @@
+Aggregate Function in SQL:
+
+max
+min
+avg
+count
+
+
+Ex:
+select max(marks) from s4;
+select min(marks) from s4;
+select count(name) from s4;
+select city, avg(marks) from s4 group by city;
+
+
+select city, name, count(id) from s4 group by city, name;
+
+[those are after "select", must have to be after "group by"]
+
+
+--------------------
+THE ULTIMATE ORDER:
+
+SELECT*
+SELECT--name/id
+SELECT--MAX(marks)/MIN(marks)
+SELECT--COUNT()
+.
+.
+FROM
+.
+.
+GROUP BY--ORDER BY--ASC/DSC
+GROUP BY--HAVING MAX()/MIN()
+GROUP BY--HAVING--ORDER BY--ASC/DSC
+
+
+[ WHERE apply condition on Rows and HAVING applies condition on Groups ]
+
+
+------------------
+UPDATE:
+
+
+update s4 set marks = marks + 1;
+update s4 set marks = marks - 2;
+
+update s4 set marks = 82 where marks = 12;
+
+update s4 set grade = "A" where grade = "Wow";
+
+
+------------------
+DELETE:
+
+delete from s4 where marks > 92;
+delete from s4 where marks < 33;
+
+delete from s4;   [ the whole table data will be deleted ]
+truncate table s4  [ this will do the same ]
+drop table s4 [ this will delete the s4 table along with schemas, that means nothing exist this time ]
+
+
+------------------
+CASCADING FOR FK:
+
+If anything changes in one places it must have to change the other palaces too.
+
+
+foreign key (dept_id) references dept(id)
+on update cascade
+on delete cascade
+
+
+------------------
+ALTER:
+
+
+alter table s4 add column age int;
+
+alter table s4 change column id student_id int;  [ change/rename  "id --> student_id" ]
+
+alter table s4 modify age varchar(10);  [ change the type "int --> varchar" ]
+
+
+
+------------------
+Sub_Query:
+
+SELECT name FROM students 
+WHERE marks = (SELECT MAX(marks) FROM students);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
