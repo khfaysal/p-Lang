@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void selectionSort(int arr[], int n)
+void selectionSort(int arr[], int size)
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         int minIndex = i; // Assume the first element is the minimum
 
-        for (int j = i + 1; j < n; j++)
+        for (int j = i + 1; j < size; j++)
         {
             if (arr[j] < arr[minIndex])
             {
@@ -20,9 +20,9 @@ void selectionSort(int arr[], int n)
     }
 }
 
-void printArray(int arr[], int n)
+void printArray(int arr[], int size)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
     }

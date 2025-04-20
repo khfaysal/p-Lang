@@ -1,51 +1,93 @@
-	Create database LabPerformanceTestA;
-	use LabPerformanceTestA;
+-- 1
+Create Database Final_Avenger_B;
+use Final_Avenger_B;
 
-	Create table EmployeeDetailsE (
-		EmployeeID INT PRIMARY KEY,
-		FirstName VARCHAR(20),
-		LastName VARCHAR(20),
-		DateOfBirth DATE,
-		Gender VARCHAR(6),
-		DepartmentID INT,
-		HireDate DATE,
-		Salary INT
-	);
+Create Table Avenger_B ( 
+AvengerID int primary key, 
+Name varchar(50), 
+Age int, 
+Team varchar(50), 
+PowerLevel int
+);
 
-	Insert Into EmployeeDetailsE VALUES 
-	(566, 'Kamrul', 'Hasan', '1987-11-07', 'M', 501, '2008-10-20', 75000),
-	(567, 'Ava', 'Ward', '1992-04-17', 'F', 502, '2013-06-30', 67000),
-	(568, 'Jacob', 'Jenkins', '1991-02-11', 'M', 503, '2015-01-3', 59000),
-	(569, 'Harper', 'Bryant', '1997-12-1', 'F', 504, '2022-03-21', 51000),
-	(570, 'Noah', 'Perry', '1983-08-13', 'M', 505, '2006-09-25', 81000);
-
-	Select * from EmployeeDetailsE 
-	Where Salary = ( Select Max(Salary) From EmployeeDetailsE);
+Create Table Missions_B ( 
+MissionID int primary key, 
+MissionName varchar (50),
+Enemy varchar(50), 
+Priority varchar(20), 
+AvengerID int,
+Foreign Key (AvengerID) References Avenger_B (AvengerID)
+);
 
 
-	Select FirstName, LastName From EmployeeDetailsE
-	Where LastName LIKE '%o%';
+-- 2
+Insert into Avenger_B values
+(201, 'Spider-Man', 25, 'Web Warriors', 82),
+(202, 'Doctor Strange', 42, 'Mystic Arts', 91),
+(203, 'Scarlet Witch', 33, 'Mystic Arts', 95),
+(204, 'Falcon', 38, 'Air Patrol', 80),
+(205, 'Ant-Man', 36, 'Quantum Team', 78);
 
-	Select DepartmentID, COUNT(*) AS EmployeeCount
-	From EmployeeDetailsE
-	GROUP BY DepartmentID;
+Insert into Missions_B values
+(401, 'Mirror Dimension', 'Dormammu', 'High', 202),
+(402, 'Quantum Heist', 'Kang the Conqueror', 'Medium', 205),
+(404, 'Sky Surveillance', 'Vulture', 'Medium', 204),
+(405, 'Web Strike', 'Green Goblin', 'High', 201),
+(406, 'Reality Collapse', 'Thanos', 'High', 203);
 
-	Select * FROM EmployeeDetailsE
-	WHERE Salary > 65000;
 
-	SELECT * FROM EmployeeDetailsE
-	ORDER BY DateOfBirth ASC
-	LIMIT 1;
+-- 3
+select MissionName
+From Missions_B
+Where Enemy = 'Kang the Conqueror';
 
-	SELECT DepartmentID FROM EmployeeDetailsE
-	WHERE Gender = 'F'
-	GROUP BY DepartmentID
-	HAVING COUNT(*) > 1;
+-- 4
+Select Name 
+From Avenger_B 
+Order by PowerLevel Desc
+limit 1;
 
-	SELECT DepartmentID
-	FROM EmployeeDetailsE
-	GROUP BY DepartmentID
-	HAVING MAX(Salary) > 80000;
 
-	SELECT SUM(Salary) AS TotalSalaryExpense
-	FROM EmployeeDetailsE;
+-- 5
+Select A.Name 
+From Avenger_B A 
+Join Missions_B M on A.AvengerID = M.AvengerID
+Where M.Enemy = 'Thanos';
+  
+  
+-- 6
+Select M.MissionName, A.Name 
+From Missions_B M
+Join Avenger_B A on M.AvengerID = A.AvengerID
+Where M.Priority = 'Medium';
+  
+  
+-- 7
+Select Name, PowerLevel, Age 
+From Avenger_B
+Where age>= 50;    
+    
+ 
+ -- 8
+ Select Priority, Count(*) AS NumberOfMissions
+ From Missions_B
+ Group By Priority
+ Order By NumberOfMissions Desc;
+  
+  
+-- 9
+Select Name From Avenger_B
+Where AvengerID NOT IN (Select AvengerID From Missions_B);
+    
+    
+-- 10
+Select A.Name, Count (M.MissionID) As NumberOfMissions
+From Avenger_B A 
+Left Join Missions_B M ON A.AvengerID = M.AvengerID
+Group By A.Name;
+    
+    
+    
+    
+    
+    

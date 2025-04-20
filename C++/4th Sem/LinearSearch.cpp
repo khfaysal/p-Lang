@@ -2,9 +2,10 @@
 using namespace std;
 int main()
 {
-    int ar[100], n;
+    int n;
     cout << "Enter the length of the array: ";
     cin >> n;
+    int ar[n];
     cout << "Enter the elements: ";
     for (int i = 0; i < n; i++)
     {
@@ -12,14 +13,14 @@ int main()
     }
 
     cout << "Enter the key: ";
-    int j, count = 0;
-    cin >> j;
+    int key, count = 0;
+    cin >> key;
     for (int i = 0; i < n; i++)
     {
 
-        if (ar[i] == j)
+        if (ar[i] == key)
         {
-            cout << "Element found at index : " << i << "\n";
+            cout << "The Key Element " << key << " found at index " << i << "\n";
             count++;
         }
     }

@@ -78,6 +78,8 @@ ALTER:
 
 alter table s4 add column age int;
 
+alter table student rename to s5;
+
 alter table s4 change column id student_id int;  [ change/rename  "id --> student_id" ]
 
 alter table s4 modify age varchar(10);  [ change the type "int --> varchar" ]
@@ -94,6 +96,21 @@ WHERE marks = (SELECT MAX(marks) FROM students);
 
 
 
+------------------
+
+Join 's:
+
+Here we can use different column name in student and course table insted of the same column name "student_ID".
+
+
+
+select * from student AS S
+inner join course AS C
+ON student.student_ID = course.student_ID;
+
+
+
+whenever we use "as s/c" that means we can call those table s insted of student/ c insted of course.
 
 
 
@@ -104,14 +121,9 @@ WHERE marks = (SELECT MAX(marks) FROM students);
 
 
 
+RULES of SQL:
 
-
-
-
-
-
-
-
-
+1. Always executed right to left.
+2. 
 
 
