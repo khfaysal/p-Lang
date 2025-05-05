@@ -1,7 +1,7 @@
-**, let firstName = 'Kamrul';
-key word - Identifier -Operator - 'value'
+**, let          firstName    =           'Kamrul';
+    key word  - Identifier -  Operator -  'value'
 
-**, [firstName [camelCase]]
+**, [  firstName - [camelCase] ]
 
 
 **, var, let, const:
@@ -29,3 +29,60 @@ BIGINT: 1234567890123456789012345678901234567890n, 12345678901234567890123456789
 
 
 
+**, Object:
+    
+    let person ={
+        name: 'Kamrul',
+        age: 25,
+        city: 'Dhaka'
+        sayHello: function(){
+            console.log('Hello, ' + this.name);
+        }
+    };  
+------
+ [   // Here the whole things called Object.
+    // name: 'Kamrul' is called key-value pair[property]
+    // name is called key, and 'Kamrul' is called value.
+    // person is called object name.
+    // person is called object reference.
+    // sayHello is called method.     ]----{{Overall this is called Object Literal.}}
+------
+
+
+***, My Invention:
+
+console.log((typeof person.sayHello).toUpperCase());
+
+**, Array in js -> (...nums) // here nums is called rest parameter. it is a variable. you can use any name instead of nums.
+    
+
+
+***, rest operator and spread operator:
+
+// [...nums is the rest operator, it collects all the arguments into an array]
+//[rest parameter should be the last parameter in the function]
+
+function adder (...nums){  
+    let sum = 0;
+    for( let i =0; i<nums.length; i++){
+        sum +=nums[i];
+    }
+    return sum;
+}
+
+let nums = [1,2,3,4,5, 85];
+
+console.log(adder(...nums)); 
+
+// [ here we are using the spread operator to spread the array into individual elements]
+
+
+***, Global Object:
+function say(){
+    console.log(this);
+}
+say();
+
+**, this:
+function -> Global Object / Window Object
+method -> Parent Object 

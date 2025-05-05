@@ -1,1 +1,3 @@
-PI = 4;
+  // if (typeof person[el] == 'function'){
+    //     person[el]();
+    // }
