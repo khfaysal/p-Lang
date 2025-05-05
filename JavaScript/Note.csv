@@ -1,0 +1,31 @@
+**, let firstName = 'Kamrul';
+key word - Identifier -Operator - 'value'
+
+**, [firstName [camelCase]]
+
+
+**, var, let, const:
+// var: function scope, hoisting, re-declared, re-assigned
+// let: block scope, hoisting, re-assigned, not re-declared
+// const: block scope, hoisting, not re-assigned, not re-declared
+
+var firstName = 'Kamrul';
+var firstName = 'Kamrul';
+--It will not show any error, but it will re-declare the variable.
+
+but,
+let firstName = 'Kamrul';
+let firstName = 'Kamrul';
+--It will show an error, because it will not re-declare the variable.
+
+
+***, NULL, UNDEFINED, OBJECT, SYMBOL, BIGINT
+
+UNDEFINED: declared but not assigned any value
+NULL: empty value, no value, no object [bus e sigerate rekhe sit book deowa]
+OBJECT: {name: 'Kamrul', age: 25, city: 'Dhaka'}
+SYMBOL: unique value, not equal to any other value
+BIGINT: 1234567890123456789012345678901234567890n, 1234567890123456789012345678901234567890
+
+
+
