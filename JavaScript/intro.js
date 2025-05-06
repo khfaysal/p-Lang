@@ -23,3 +23,4 @@ console.log(typeof str); // string
 console.log(typeof val); // undefined
 console.log(typeof num); // object (this is a bug in JS, null is actually an object)
 console.log(typeof obj); // object
+console.log(str);

@@ -50,8 +50,8 @@ BIGINT: 1234567890123456789012345678901234567890n, 12345678901234567890123456789
 
 
 ***, My Invention:
-
 console.log((typeof person.sayHello).toUpperCase());
+
 
 **, Array in js -> (...nums) // here nums is called rest parameter. it is a variable. you can use any name instead of nums.
     
@@ -86,3 +86,19 @@ say();
 **, this:
 function -> Global Object / Window Object
 method -> Parent Object 
+
+
+***, If the property and the perameter name is same, then we can use shorthand property name.
+Example:
+
+function createPerson(name, age, interest) {
+  return {
+    name,
+    age,
+    interest,
+    sayHello() {
+      console.log("Hello ", this.name);
+    },
+  };
+}
+let person1 = createPerson("Kamrul Hasan", 25, ["C++", "Js", "Python", "Java"]);
