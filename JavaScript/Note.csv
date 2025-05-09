@@ -102,3 +102,21 @@ function createPerson(name, age, interest) {
   };
 }
 let person1 = createPerson("Kamrul Hasan", 25, ["C++", "Js", "Python", "Java"]);
+
+
+***, Function er body age thekei js scan kore rakhe.
+
+Ex: 
+console.log(num1); // it will show undefined coz ekhane ekhno num1 er value assign hoy nai.
+let num1 = 10;
+let num2 =20;
+
+***, BUT, [Hoisting]
+
+colsole.log(add(10,20));   //[It will show the output coz ekhane function er body age
+                              thekei js scan kore rakhe]
+function add(num1, num2){
+    return num1 + num2;
+}
+
+
