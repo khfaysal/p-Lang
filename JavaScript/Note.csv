@@ -1,3 +1,8 @@
+***, Normal Sign in JS:
+4 squre: 4**2
+4 cube: 4**3
+
+
 **, let          firstName    =           'Kamrul';
     key word  - Identifier -  Operator -  'value'
 
@@ -120,3 +125,21 @@ function add(num1, num2){
 }
 
 
+*****, Full Form:
+
+NaN = Not a Number
+
+
+
+***, =, ==, ===, !=, !== :
+ = : assignment operator
+ == : loose equality operator, it checks the value only ['5' == 5]  -> true
+ === : strict equality operator, it checks the value and the type ['5' === 5] -> false
+ != : loose inequality operator, it checks the value only ['5' != 5] -> false
+
+
+
+***, Exception:
+There is only one value in JavaScript that is not equal to itself that is NaN.
+
+console.log(NaN == NaN) // it will show false

@@ -48,7 +48,7 @@ const Charecter = [
 let allmass = Charecter.reduce((acc, el) => {
   return acc + Number(el.mass);
 }, 0);
-console.log(allmass); //210
+// console.log(allmass); //210
 //all names count:
 let allname = Charecter.reduce((acc, el) => {
   return acc + el.name.length;
@@ -67,4 +67,13 @@ let color = Charecter.reduce((acc, el) => {
   return acc;
 }, {});
 
-console.log(color);
+// console.log(color);
+
+
+//-------------------
+//Ternary operator:
+let age = 22;
+let m = age > 18 ? "Welcome" : "get o";
+console.log(m.toUpperCase());
+
+
