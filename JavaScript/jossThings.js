@@ -89,3 +89,6 @@ console.log(arr22);
 //-----------
 let ten = 10;
 console.log(ten * ten); // 100
+//--------
+let v = false;
+console.log(v.toUpperCase());
