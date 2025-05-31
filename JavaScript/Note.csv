@@ -143,3 +143,21 @@ NaN = Not a Number
 There is only one value in JavaScript that is not equal to itself that is NaN.
 
 console.log(NaN == NaN) // it will show false
+
+
+***, 
+let --> block scope
+const --> block scope
+var --> function scope
+
+ex:
+*, let:
+for (let i = 0; i < size; i++) {
+cout<< 
+}
+console.log(i); // it will show error coz i is not defined with let.
+*, var:
+for (var i = 0; i < size; i++) {
+cout<< 
+}
+console.log(i); // it will show the value of i coz i is defined with var.

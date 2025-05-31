@@ -1,3 +1,3 @@
-  // if (typeof person[el] == 'function'){
-    //     person[el]();
+    // if (m === 13) {
+    //   continue;
     // }

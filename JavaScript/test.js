@@ -1,10 +1,6 @@
-let kk = [
-  ["Farjana", "Suchi"],
-  ["kamrul", "hasan", ["jahan", "lisa"]],
-];
+let name = prompt("What is your name?");
+console.log("Hello, " + name + "!");
 
-// console.log(kk[1][2][0]);
-
-let arr11 = "Hello Wrold";
-let arr22 = arr11.slice(0, 3);
-console.log(arr22);
+let age = prompt("Enter your age:");
+age = parseInt(age); // Convert string to number
+console.log("You are " + age + " years old.");
