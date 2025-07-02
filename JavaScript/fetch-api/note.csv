@@ -1,0 +1,11 @@
+paramiter: it recieves value like x, y, z
+argument: it is used to pass value like 4, 6
+[argument pass hoy. paramitter recieve kore]
+
+
+HTTP VERB:
+GET = HTTP VERB
+POST = Resource Create
+PUT = resource modify  -> [replace full resource]
+PATCH = resource modify  -> [modify part of resource]
+DELETE = resource delete
