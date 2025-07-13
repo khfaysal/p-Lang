@@ -1,0 +1,8 @@
+Base: 
+Base styles are the default styles applied to HTML elements. These styles provide a consistent look across your site and usually target bare HTML elements (like h1, p, a, ul, etc.).
+
+Component: 
+Component styles are for specific reusable UI blocks. These can be buttons, cards, navbars, modals, etc.
+
+Utility:
+Utility classes are single-purpose classes that do one thing only (e.g., set margin, padding, color).
