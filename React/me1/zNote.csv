@@ -1,0 +1,9 @@
+.jsx -> Java Script xml file
+
+
+*** Components: [is nothing but a special type of function ]
+3 rule of Components:
+1. A Component must be a function
+2. That function should return something
+3. That something should be some html-ish code (JSX element)
+
