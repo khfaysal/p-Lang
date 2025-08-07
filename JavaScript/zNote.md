@@ -1,15 +1,15 @@
-***, Normal Sign in JS:
+## Normal Sign in JS:
 4 squre: 4**2
 4 cube: 4**3
 
 
-**, let          firstName    =           'Kamrul';
+## let          firstName    =           'Kamrul';
     key word  - Identifier -  Operator -  'value'
 
-**, [  firstName - [camelCase] ]
+## [  firstName - [camelCase] ]
 
 
-**, var, let, const:
+## var, let, const:
 // var: function scope, hoisting, re-declared, re-assigned
 // let: block scope, hoisting, re-assigned, not re-declared
 // const: block scope, hoisting, not re-assigned, not re-declared
@@ -34,7 +34,7 @@ BIGINT: 1234567890123456789012345678901234567890n, 12345678901234567890123456789
 
 
 
-**, Object:
+## Object:
     
     let person ={
         name: 'Kamrul',
@@ -54,15 +54,15 @@ BIGINT: 1234567890123456789012345678901234567890n, 12345678901234567890123456789
 ------
 
 
-***, My Invention:
+## My Invention:
 console.log((typeof person.sayHello).toUpperCase());
 
 
-**, Array in js -> (...nums) // here nums is called rest parameter. it is a variable. you can use any name instead of nums.
+## Array in js -> (...nums) // here nums is called rest parameter. it is a variable. you can use any name instead of nums.
     
 
 
-***, rest operator and spread operator:
+## rest operator and spread operator:
 
 // [...nums is the rest operator, it collects all the arguments into an array]
 //[rest parameter should be the last parameter in the function]
@@ -82,18 +82,18 @@ console.log(adder(...nums));
 // [ here we are using the spread operator to spread the array into individual elements]
 
 
-***, Global Object:
+## Global Object:
 function say(){
     console.log(this);
 }
 say();
 
-**, this:
+## this:
 function -> Global Object / Window Object
 method -> Parent Object 
 
 
-***, If the property and the perameter name is same, then we can use shorthand property name.
+## If the property and the perameter name is same, then we can use shorthand property name.
 Example:
 
 function createPerson(name, age, interest) {
@@ -109,7 +109,7 @@ function createPerson(name, age, interest) {
 let person1 = createPerson("Kamrul Hasan", 25, ["C++", "Js", "Python", "Java"]);
 
 
-***, Function er body age thekei js scan kore rakhe.
+## Function er body age thekei js scan kore rakhe.
 
 Ex: 
 console.log(num1); // it will show undefined coz ekhane ekhno num1 er value assign hoy nai.
@@ -125,13 +125,13 @@ function add(num1, num2){
 }
 
 
-*****, Full Form:
+## Full Form:
 
 NaN = Not a Number
 
 
 
-***, =, ==, ===, !=, !== :
+## =, ==, ===, !=, !== :
  = : assignment operator
  == : loose equality operator, it checks the value only ['5' == 5]  -> true
  === : strict equality operator, it checks the value and the type ['5' === 5] -> false
@@ -139,13 +139,13 @@ NaN = Not a Number
 
 
 
-***, Exception:
+## Exception:
 There is only one value in JavaScript that is not equal to itself that is NaN.
 
 console.log(NaN == NaN) // it will show false
 
 
-***, 
+## 
 let --> block scope
 const --> block scope
 var --> function scope
@@ -161,3 +161,32 @@ for (var i = 0; i < size; i++) {
 cout<< 
 }
 console.log(i); // it will show the value of i coz i is defined with var.
+
+## Object vs Array in js
+
+# An object is used to store data in the form of key–value pairs.
+---
+const person = {
+  name: "Faysal",
+  age: 22,
+  isStudent: true
+};
+console.log(person.name); // "Faysal"
+----
+
+# An array is a special object used to store ordered lists (indexed by numbers).
+---
+const fruits = ["apple", "banana", "mango"];
+
+console.log(fruits[0]); // "apple"
+---
+
+
+## different -> include vs find
+Both include() and find() are array methods in JavaScript, but they are used for different purposes.
+
+# Feature	    --   includes()       --   	find()
+Use case:	Check if a value exists --	Find the first matching item
+Returns:	true or false	-- The element itself (or undefined)
+Works with:	Primitive values (strings, numbers)	-- Objects or any complex condition
+Stop on:  Stops when match is found	-- Stops when condition is true
