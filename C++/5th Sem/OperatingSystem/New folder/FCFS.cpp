@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 using namespace std;
 
@@ -40,7 +38,7 @@ int main()
     // Gantt Chart
     cout << "\nGantt Chart:\n|";
     for (int i = 0; i < n; i++)
-        cout << " P" << i + 1 << " |";
+        cout << "  P" << i + 1 << "  |";
     cout << "\n";
     cout << start[0] << "\t";
     for (int i = 0; i < n; i++)
