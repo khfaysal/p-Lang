@@ -25,4 +25,16 @@
   const result1 = true && "Hello"; // "Hello"
   const result2 = false && "Hello"; // false
 
-Logical OR
+# Logical OR Operator:
+
+- If the first operand is truthy, return the first operand.
+- If the first operand is falsey, return the second operand.
+
+# Nullish Value:
+
+- undefined
+- null
+
+ex:
+jekono falsey value: name || "Sumit"
+only Nullish Value: name ?? "Sumit"

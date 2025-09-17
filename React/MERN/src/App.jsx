@@ -1,30 +1,27 @@
 import './App.css';
 
-function Item({ name, isPacked }) {
-
-  //vanilla js: controller/ logical part
-  const isChecked = [isPacked ? "☑️" : null];
-
-  //jsx: view part
-  return (
-    <li className="item">
-      {name} {isChecked}
-    </li>
-  );
-}
-
+//main app component:
 function App() {
 
+  const people = [
+    'Creola Katherine Johnson: mathematician',
+    'Mario José Molina-Pasquel Henríquez: chemist',
+    'Mohammad Abdus Salam: physicist',
+    'Percy Lavon Julian: chemist',
+    'Subrahmanyan Chandrasekhar: astrophysicist'
+  ];
+  // console.log(people);
+
+  const persons = [];
+  people.forEach((p) => {
+    persons.push(<li>{p}</li>
+    )
+  })
   return (
     <section>
 
-      <h1>Sally Ride's Packing List</h1>
-
-      <ul>
-        <Item isPacked={true} name="Space suit" />
-        <Item isPacked={true} name="Helmet with a golden leaf" />
-        <Item isPacked={false} name="Photo of Tam" />
-      </ul>
+      <h1>People Lists</h1>
+      <ul>{persons}</ul>
 
     </section>
   )
