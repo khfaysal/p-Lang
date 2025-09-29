@@ -1,30 +1,30 @@
 import './App.css';
 
-//main app component:
 function App() {
 
-  const people = [
-    'Creola Katherine Johnson: mathematician',
-    'Mario José Molina-Pasquel Henríquez: chemist',
-    'Mohammad Abdus Salam: physicist',
-    'Percy Lavon Julian: chemist',
-    'Subrahmanyan Chandrasekhar: astrophysicist'
+  const fact = [
+    "The name of my country is Bangladesh",
+    "The capital of Bangladesh is Dhaka",
+    "The currency of Bangladesh is Taka",
+    "The language of Bangladesh is Bangla",
+    "The population of Bangladesh is 170 million",
+    "The area of Bangladesh is 147570 sq km",
+    "The national flower of Bangladesh is Shapla",
   ];
-  // console.log(people);
 
-  const persons = [];
-  people.forEach((p) => {
-    persons.push(<li>{p}</li>
-    )
+  const person = [];
+  fact.forEach((p) => {
+    person.push(<li>{p}</li>);
   })
+  // console.log(person);
+
   return (
     <section>
-
-      <h1>People Lists</h1>
-      <ul>{persons}</ul>
-
+      <h1>bFacts about Bangladesh</h1>
+      <ul><b>{person}</b></ul>
     </section>
   )
+
 }
 
 export default App
