@@ -1,30 +1,19 @@
-import './App.css';
+// Import the ProfileCard component
+import ProfileCard from './ProfileCard';
 
+// Main App component
 function App() {
-
-  const fact = [
-    "The name of my country is Bangladesh",
-    "The capital of Bangladesh is Dhaka",
-    "The currency of Bangladesh is Taka",
-    "The language of Bangladesh is Bangla",
-    "The population of Bangladesh is 170 million",
-    "The area of Bangladesh is 147570 sq km",
-    "The national flower of Bangladesh is Shapla",
-  ];
-
-  const person = [];
-  fact.forEach((p) => {
-    person.push(<li>{p}</li>);
-  })
-  // console.log(person);
-
   return (
-    <section>
-      <h1>bFacts about Bangladesh</h1>
-      <ul><b>{person}</b></ul>
-    </section>
+    <>
+      {/* Render ProfileCard for Kamrul */}
+      <ProfileCard avatar="https://vcf.vn.ua/wp-content/uploads/ulybchivyj-yunosha.jpg" name="Kamrul" age="24" occupation="Web Developer" />
+      {/* Render ProfileCard for Hasan */}
+      <ProfileCard avatar="https://vcf.vn.ua/wp-content/uploads/ulybchivyj-yunosha.jpg" name="Hasan" age="24" occupation="Web Developer" />
+      {/* Render ProfileCard for Faysal */}
+      <ProfileCard avatar="https://vcf.vn.ua/wp-content/uploads/ulybchivyj-yunosha.jpg" name="Faysal " age="24" occupation="Web Developer" />
+    </>
   )
-
 }
 
-export default App
+// Export the App component as default
+export default App;
