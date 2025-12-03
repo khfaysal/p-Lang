@@ -84,6 +84,15 @@
   margin: 0;
   font-size: 1.2rem;
 }
+/* mid part*/
+.mid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(240, 236, 236);
+  padding: 50px;
+  gap: 20px;
+}
 /* Footer Styles */
 .footer {
   display: flex;
