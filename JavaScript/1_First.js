@@ -7,3 +7,4 @@ let num2 = 123.786;
 console.log(Math.round(num2));
 console.log(Math.ceil(num2));
 console.log(Math.floor(num2));
+// Nothig to added
