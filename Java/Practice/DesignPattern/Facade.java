@@ -1,82 +1,52 @@
-// Subsystem Components
-class AudioPlayer {
-    public void playAudio(String filename) {
-        System.out.println("Playing audio file: " + filename);
-    }
+interface OrderTask {
+    void execute(String productId, double amount);
+}
 
-    public void stopAudio() {
-        System.out.println("Stopping audio playback.");
+class InventoryTask implements OrderTask {
+    @Override
+    public void execute(String productId, double amount) {
+        System.out.println("Checking stock for " + productId);
     }
 }
 
-class VideoPlayer {
-    public void playVideo(String filename) {
-        System.out.println("Playing video file: " + filename);
-    }
-
-    public void stopVideo() {
-        System.out.println("Stopping video playback.");
+class PaymentTask implements OrderTask {
+    @Override
+    public void execute(String productId, double amount) {
+        System.out.println("Processing payment: Tk " + amount);
     }
 }
 
-class ImageLoader {
-    public void loadImage(String filename) {
-        System.out.println("Loading image file: " + filename);
-    }
-
-    public void unloadImage() {
-        System.out.println("Unloading image.");
+class ShippingTask implements OrderTask {
+    @Override
+    public void execute(String productId, double amount) {
+        System.out.println("Shipping product: " + productId);
     }
 }
 
-// Facade Class
-class MultimediaFacade {
-    private AudioPlayer audioPlayer;
-    private VideoPlayer videoPlayer;
-    private ImageLoader imageLoader;
+class OrderFacade {
+    private OrderTask inventory;
+    private OrderTask payment;
+    private OrderTask shipping;
 
-    public MultimediaFacade() {
-        this.audioPlayer = new AudioPlayer();
-        this.videoPlayer = new VideoPlayer();
-        this.imageLoader = new ImageLoader();
+    public OrderFacade() {
+        this.inventory = new InventoryTask();
+        this.payment = new PaymentTask();
+        this.shipping = new ShippingTask();
     }
 
-    public void playMedia(String filename, String mediaType) {
-        switch (mediaType.toLowerCase()) {
-            case "audio":
-                audioPlayer.playAudio(filename);
-                break;
-            case "video":
-                videoPlayer.playVideo(filename);
-                break;
-            case "image":
-                imageLoader.loadImage(filename);
-                break;
-            default:
-                System.out.println("Unsupported media type: " + mediaType);
-        }
-    }
-
-    public void stopAllMedia() {
-        audioPlayer.stopAudio();
-        videoPlayer.stopVideo();
-        imageLoader.unloadImage();
+    // Unified Simple Method
+    public void placeOrder(String productId, double amount) {
+        System.out.println("Order Started");
+        inventory.execute(productId, amount);
+        payment.execute(productId, amount);
+        shipping.execute(productId, amount);
+        System.out.println("Order Completed Successfully!");
     }
 }
 
-// Client Code
 public class Facade {
     public static void main(String[] args) {
-        MultimediaFacade facade = new MultimediaFacade();
-
-        // Client interacts with the facade, not the complex subsystem directly
-        facade.playMedia("song.mp3", "audio");
-        facade.playMedia("movie.mp4", "video");
-        facade.playMedia("picture.jpg", "image");
-
-        System.out.println("\nStopping all media:");
-        facade.stopAllMedia();
-
-        facade.playMedia("unknown.file", "unknown");
+        OrderFacade order = new OrderFacade();
+        order.placeOrder("PROD-999", 3500.00);
     }
 }
