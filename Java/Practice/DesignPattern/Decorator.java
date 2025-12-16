@@ -1,9 +1,12 @@
 interface Coffee {
+    // Returns the description of the coffee
     String getDescription();
 
+    // Returns the cost of the coffee
     double getCost();
 }
 
+// Concrete Component: Represents the base coffee without any addons
 class PlainCoffee implements Coffee {
     @Override
     public String getDescription() {
@@ -16,9 +19,13 @@ class PlainCoffee implements Coffee {
     }
 }
 
+// Abstract Decorator: Base class for all decorators
+// Wraps a Coffee object and delegates calls to it
 abstract class CoffeeDecorator implements Coffee {
+    // Holds reference to the wrapped coffee object
     protected Coffee decoratedCoffee;
 
+    // Constructor to wrap a coffee object
     public CoffeeDecorator(Coffee decoratedCoffee) {
         this.decoratedCoffee = decoratedCoffee;
     }
@@ -66,19 +73,20 @@ class SugarDecorator extends CoffeeDecorator {
     }
 }
 
+// Driver Class: Demonstrates the Decorator Pattern
 public class Decorator {
     public static void main(String[] args) {
-        // Plain Coffee
+        // Example 1: Plain Coffee without any addons
         Coffee coffee = new PlainCoffee();
         System.out.println("Description: " + coffee.getDescription());
         System.out.println("Cost: $" + coffee.getCost());
 
-        // Coffee with Milk
+        // Example 2: Coffee decorated with Milk
         Coffee milkCoffee = new MilkDecorator(new PlainCoffee());
         System.out.println("\nDescription: " + milkCoffee.getDescription());
         System.out.println("Cost: $" + milkCoffee.getCost());
 
-        // Coffee with Sugar and Milk
+        // Example 3: Coffee decorated with both Sugar and Milk (chained decorators)
         Coffee sugarMilkCoffee = new SugarDecorator(new MilkDecorator(new PlainCoffee()));
         System.out.println("\nDescription: " + sugarMilkCoffee.getDescription());
         System.out.println("Cost: $" + sugarMilkCoffee.getCost());
