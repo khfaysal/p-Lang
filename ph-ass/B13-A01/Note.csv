@@ -1,0 +1,15 @@
+  vertical-align: middle; --> web automatically take margin bottom. to overcome this we can use this.
+
+  list-style: none;  --> to remove the default bullet points of ul and ol.
+
+  focus  --> to style the input field when it is focused.
+
+  mouse hover --> to style the element when mouse is hovered over it.
+
+  a:visited  --> to style the link which is already visited.
+
+  li-last-child  --> to style the last item of the list.
+  list-first-child  --> to style the first item of the list.
+  list-nth-child(n)  --> to style the nth item of the list.
+  li*5  --> to create 5 list items in one go in emmet.
+  

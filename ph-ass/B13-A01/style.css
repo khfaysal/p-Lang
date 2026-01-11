@@ -1,0 +1,276 @@
+#nav {
+  background: #ffffff;
+  width: 1146px;
+  margin: 10px;
+  height: 50px;
+  padding: 15px 0px 0px 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: solid red; */
+  /* position: fixed; */
+  /* top: 0px; */
+}
+.nv {
+  position: fixed;
+  top: 0px;
+  width: 1146px;
+  z-index: 1;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#nav .logo img {
+  width: 90px;
+  height: 45px;
+}
+#nav .ref3 {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+#nav .ref3 a {
+  font-weight: semibold;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+/* Universal Button Style */
+.btn {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #1f7e2d;
+  color: white;
+  font-weight: bold;
+  width: 190px;
+  height: 40px;
+  border-radius: 9px;
+  border-color: #14c472;
+  cursor: pointer;
+}
+.btn:hover {
+  background: white;
+  color: #14c472;
+  border-color: #14c472;
+}
+.btnn {
+  margin-top: 20px;
+  width: 190px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: none;
+  color: white;
+  border-color: white;
+}
+.btnn:hover {
+  background: rgb(0, 0, 0);
+  color: #14c472;
+  border-color: #14c472;
+}
+/* NavBar Complete........... */
+
+#bnr {
+  background-image: url(/assets/hero-bg.png);
+  opacity: 0.9;
+  width: 1280px;
+  height: 560px;
+  margin: 80px 10px 10px 10px;
+  padding-top: 80px;
+  /* padding-bottom: 40px; */
+  text-align: center;
+  /* border: solid red; */
+  box-sizing: border-box;
+  align-items: center;
+}
+
+#bnr .heading h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#bnr .heading h1 {
+  font-size: 44px;
+  font-weight: bold;
+  color: #18b36a;
+}
+
+#bnr p {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#bnr .fline {
+  background: white;
+  width: 200px;
+  height: 24px;
+  border-radius: 11px;
+  margin-left: 560px;
+
+  font-weight: lighter;
+  /* color: white; */
+}
+#bnr .fline h4 {
+  color: green;
+  font-weight: lighter;
+  align-items: center;
+  padding-top: 3px;
+}
+/* Banner done */
+#notes {
+  /* background: blue; */
+  width: 1280px;
+  height: 560px;
+  margin: 10px;
+  padding-top: 80px;
+  /* border: solid red; */
+}
+#notes h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+#notes p {
+  font-size: 16px;
+  color: #4f4f4f;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+#box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 60px 40px;
+  align-items: center;
+}
+
+#box .card {
+  background: rgb(218, 216, 213);
+  padding: 40px 30px;
+  border-radius: 15px;
+  align-items: center;
+  width: 200px;
+  height: 199px;
+  justify-content: space-between;
+}
+#box .card img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 68, 0);
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+#box .card h3 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600px;
+  font-weight: semibold;
+  padding: 5px;
+  color: #000000;
+  margin-top: 20px;
+}
+
+#box .card p {
+  font-size: 16px;
+  text-align: center;
+  color: #4f4f4f;
+}
+/* sec notes done  */
+#sol {
+  display: flex;
+  /* border: solid red; */
+  width: 1280px;
+  height: 760px;
+  margin: 10px;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+#sol .tx {
+  /* padding-left: 10px; */
+  padding-top: 66px;
+}
+#sol .tx h6 {
+  color: #14c472;
+  font-style: capitalize;
+  font-size: 18px;
+}
+#sol .tx h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 10px;
+}
+#sol .tx p {
+  font-size: 17px;
+  color: #4f4f4f;
+  margin-top: 22px;
+  margin-bottom: 40px;
+}
+
+#sol .tx .ulll {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Solution sec done  */
+#sl {
+  background: #f4f1f1;
+  /* border: solid red; */
+  width: 1280px;
+  height: 240px;
+  margin: 10px;
+  padding-top: 80px;
+  text-align: center;
+}
+
+#sl .alada {
+  display: flex;
+  text-align: center;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 11px;
+}
+#sl .alada .thisone {
+  list-style: none;
+}
+/* sl complete */
+#last {
+  background: #344361;
+  width: 1280px;
+  height: 200px;
+  margin: 10px;
+  padding-top: 80px;
+  text-align: center;
+}
+#last .ls {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 150px 0px 100px;
+}
+
+#last .ls h4 {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+.links img {
+  width: 3px;
+  height: 3px;
+}
+
+#last p {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+}
